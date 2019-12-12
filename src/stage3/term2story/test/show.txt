@@ -1,0 +1,35 @@
+Prediction:
+we visited a small town . the table was set up . there were many books to be found . this man looked very old . he played games with the people watching them .
+Frame:
+<s> Arriving_Frame town_NOUN <s> table_NOUN Placing_Frame <s> Locating_Frame books_NOUN <s> man_NOUN Give_impression_Frame <s> man_NOUN <unk> people_NOUN Perception_active_Frame games_NOUN <s> Performers_and_roles_Frame games_NOUN </s>
+Ground Truth:
+<s> the local parish holds a craft show each year . <s> lots of folks come out and set up tables to sell their crafts . <s> some of these crafts are very unique and take a lot of talent to make . <s> folks of all ages come out to peruse the crafts for sale . <s> folks of all ages come out to peruse the crafts for sale . <s> some of the <unk> even dress up in unique costumes as part of their selling act . </s>
+===============================================
+Prediction:
+it was [female] 's first day of school . she had put a table outside . she got food from a guy who was used to the table . everyone enjoyed the food . by the end of the night everyone got together and opened their gifts
+Frame:
+<s> day_NOUN school_NOUN <s> table_NOUN Placing_Frame <s> table_NOUN Using_Frame guy_NOUN Transition_to_state_Frame food_NOUN <s> Everyone_NOUN Experiencer_focus_Frame food_NOUN <s> Transition_to_state_Frame gifts_NOUN <s> end_NOUN night_NOUN everyone_NOUN time_NOUN </s>
+Ground Truth:
+<s> i was so excited to be heading to the crafts fair . <s> when i arrived i saw a great booth with a variety of great crafts . <s> when i arrived i saw a great booth with a variety of great crafts . <s> i stopped at chatted at my friend [female] 's booth for a bit . <s> there were even booths set up for all of the kids . <s> i found some awesome crafts at the fair , i ' m really happy that i went . </s>
+===============================================
+Prediction:
+we visited a small town . the table was set up . there were many books to be found . this man looked very old . he played games with the people watching them .
+Frame:
+<s> Arriving_Frame town_NOUN <s> table_NOUN Placing_Frame <s> Locating_Frame books_NOUN <s> man_NOUN Give_impression_Frame <s> man_NOUN <unk> people_NOUN Perception_active_Frame games_NOUN <s> Performers_and_roles_Frame games_NOUN </s>
+Ground Truth:
+<s> the church is old , but it has a nice history . <s> they display this history during the afternoon . <s> some books even talk about location . <s> the older members of the church remember these things . <s> the older members of the church remember these things . <s> it makes them sad . </s>
+===============================================
+Prediction:
+it was [female] 's first day of school . she had put a table outside . she got food from a guy who was used to the table . everyone enjoyed the food . by the end of the night everyone got together and opened their gifts
+Frame:
+<s> day_NOUN school_NOUN <s> table_NOUN Placing_Frame <s> table_NOUN Using_Frame guy_NOUN Transition_to_state_Frame food_NOUN <s> Everyone_NOUN Experiencer_focus_Frame food_NOUN <s> Transition_to_state_Frame gifts_NOUN <s> end_NOUN night_NOUN everyone_NOUN time_NOUN </s>
+Ground Truth:
+<s> the people arrived to get ready for the craft fair . <s> the various merchants set up their booths . <s> the various merchants set up their booths . <s> the different merchants got together to talk before people began to arrive . <s> even the kids got to make some crafts . <s> everyone is set up and ready for the craft fair . </s>
+===============================================
+Prediction:
+we visited a small town . the table was set up . there were many books to be found . this man looked very old . he played games with the people watching them .
+Frame:
+<s> Arriving_Frame town_NOUN <s> table_NOUN Placing_Frame <s> Locating_Frame books_NOUN <s> man_NOUN Give_impression_Frame <s> man_NOUN <unk> people_NOUN Perception_active_Frame games_NOUN <s> Performers_and_roles_Frame games_NOUN </s>
+Ground Truth:
+<s> the annual victorian craft fair was hosted at the parish church of location location and organization organization again this year . <s> vendors came from all over the state to show off their crafts . <s> there was a large variety of pictures and decor . <s> even mr [male] made an appearance . <s> even mr [male] made an appearance . <s> he brought along one of his bird toys to wow the visitors . everyone always loves him . </s>
+===============================================

@@ -1,0 +1,5 @@
+we visited a small town . <s> the table was set up . <s> there were many books to be found . <s> this man looked very old . <s> he played games with the people watching them . </s>
+it was [female] 's first day of school . <s> she had put a table outside . <s> she got food from a guy who was used to the table . <s> everyone enjoyed the food . <s> by the end of the night everyone got together and opened their gifts
+we visited a small town . <s> the table was set up . <s> there were many books to be found . <s> this man looked very old . <s> he played games with the people watching them . </s>
+it was [female] 's first day of school . <s> she had put a table outside . <s> she got food from a guy who was used to the table . <s> everyone enjoyed the food . <s> by the end of the night everyone got together and opened their gifts
+we visited a small town . <s> the table was set up . <s> there were many books to be found . <s> this man looked very old . <s> he played games with the people watching them . </s>
