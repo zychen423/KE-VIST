@@ -1,5 +1,5 @@
 # KE_VIST
-The code and output of our AAAI paper "Knowledge-Enriched Visual Storytelling"
+The code and output of our AAAI paper "Knowledge-Enriched Visual Storytelling" [arxiv](https://arxiv.org/abs/1912.01496)
 
 
 ## generated_stories
