@@ -9,11 +9,11 @@ import math
 
 BATCH_SIZE = 64
 
-with open('/home/zychen/project/commen-sense-storytelling/relation_score/data/from_image2term_on_vist/storyid2images.json', 'r') as f:
+with open('./data/storyid2images.json', 'r') as f:
     story_id2image_ids = json.load(f)
-with open("/home/zychen/project/commen-sense-storytelling/relation_score/data/from_image2term_on_vist/img2terms.json") as f:
+with open("./data/img2terms.json") as f:
     img2terms = json.load(f)
-with open("/home/zychen/project/commen-sense-storytelling/relation_score/data/from_image2term_on_vist/img_pair2path.vg.json") as f:
+with open("./data/img_pair2path.vg.json") as f:
     img_pair2path = json.load(f)
 
 
@@ -64,14 +64,13 @@ def loss_function(preds, labels, lens):
     return loss
 
 
-with open('/home/zychen/project/commen-sense-storytelling/relation_score/language_model_method/old_src/tokenizer.pkl', 'rb') as f:
+with open('./tokenizer.pkl', 'rb') as f:
     tokenizer = pickle.load(f)
 ntokens = tokenizer.vocab_size
 model = RNNModel(ntokens, 100, 100, dropout=0.0,
                  pad_token=tokenizer.term2id['PAD'])
 model = model.cuda()
-model.load_state_dict(torch.load(
-    '/home/zychen/project/commen-sense-storytelling/relation_score/language_model_method/old_src/model.pt'))
+model.load_state_dict(torch.load('./model.pt'))
 model = model.eval()
 loss_fn = nn.CrossEntropyLoss(reduction='none')
 
@@ -81,7 +80,7 @@ used_cache = 0
 result = {}
 for count, (story_id, img_ids) in enumerate(story_id2image_ids.items()):
     if count % 100 == 1:
-        with open('/home/zychen/project/commen-sense-storytelling/relation_score/language_model_method/old_src/vist_scored_terms_6_path.json', 'w') as f:
+        with open('./vist_scored_terms_6_path.json', 'w') as f:
             print('saving until', count)
             json.dump(result, f, indent=4)
     temp_results = []
@@ -116,5 +115,5 @@ for count, (story_id, img_ids) in enumerate(story_id2image_ids.items()):
         original_termset2select_path[str(original_termsets)] = path
         result[story_id] = path
     print()
-with open('/home/zychen/project/commen-sense-storytelling/relation_score/language_model_method/old_src/vist_scored_terms_6_path.json', 'w') as f:
+with open('./vist_scored_terms_6_path.json', 'w') as f:
     json.dump(result, f, indent=4)
