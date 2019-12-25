@@ -29,6 +29,10 @@ Unlike the format in VIST dataset, here we put all stories in a column. E.g.
 
 
 ## Stage 1: Word distillation from input prompts
+1. in ```src/stage1/image_preprocess``` resize images into 224*224
+```
+bash resize_all_image.sh CPU_NUM IMAGE_DIR OUTPUT_DIR
+```
 
 ## Stage 2: Word enrichment using knowledge graphs
 ### Environment
