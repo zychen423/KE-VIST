@@ -48,7 +48,7 @@ trained model will be saved as ```./model.pt```
 ```
 python score_relation.vg.py
 ```
-result story_id-to-path file will be saved as ```./vist_scored_terms_6_path.json```
+result story_id-to-path file will be saved as ```./vist_scored_terms_6_path.json``` (The path in this file is different from that in the generated stories since the model has been trained again)
 
 For the openIE part, I mis-delete the knowledge graph result of OpenIE. I will try to solve it in the future.
 
