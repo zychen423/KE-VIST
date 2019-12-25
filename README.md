@@ -1,5 +1,5 @@
 # KE_VIST
-The code and output of our AAAI paper "Knowledge-Enriched Visual Storytelling" [arxiv](https://arxiv.org/abs/1912.01496)
+The code and output of our AAAI paper "Knowledge-Enriched Visual Storytelling" ([arxiv](https://arxiv.org/abs/1912.01496))
 
 
 ## generated_stories
@@ -26,3 +26,30 @@ Unlike the format in VIST dataset, here we put all stories in a column. E.g.
 ```
 
 `predicted_term_seq` is either the terms predicted from our image2term module(in this example) or . `predicted_story` is the whole story predicted by our term2story model, and `text_mapped_with_nouns_and_frame` is the result open-seasame extracted from original sentence.
+
+
+## Stage 1: Word distillation from input prompts
+
+## Stage 2: Word enrichment using knowledge graphs
+### Environment
+```
+pytorch==1.3
+python==3.6
+```
+### Usage
+1. in ```src/stage2/data``` execute ```./download_big_data.sh``` to download those files > 100MB
+2. to train the path scoring language model
+```
+python3.6 main.py
+```
+trained model will be saved as ```./model.pt```
+
+3 to link paths using Visual Genome Knowledge Graph i.e. **Visual_Genome** in the paper
+```
+python score_relation.vg.py
+```
+result story_id-to-path file will be saved as ```./vist_scored_terms_6_path.json```
+
+For the openIE part, I mis-delete the knowledge graph result of OpenIE. I will try to solve it in the future.
+
+## Stage 3: Story generation
