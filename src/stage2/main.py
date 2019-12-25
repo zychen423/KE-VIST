@@ -15,16 +15,14 @@ def cudalize(x):
     return x.cuda()
 
 
-ROC_terms_path = '/home/joe32140/commen-sense-storytelling/data/ROC/'\
-    + 'ROC_replace_coref_gender_mapped_frame_noun.json'
+ROC_terms_path = './data/ROC_replace_coref_gender_mapped_frame_noun.json'
 termset_seqs = []
 with open(ROC_terms_path, 'r') as f:
     objs = json.load(f)
     for obj in objs:
         termset_seq = obj['gender_coref_mapped_seq']
         termset_seqs.append(termset_seq)
-VIST_terms_path = '/home/joe32140/commen-sense-storytelling/data/VIST/'\
-    + 'VIST_coref_nos_mapped_frame_noun_train.json'
+VIST_terms_path = './data/VIST_coref_nos_mapped_frame_noun_train.json'
 with open(VIST_terms_path, 'r') as f:
     termsets = json.load(f)
     termset_seq = []
@@ -35,7 +33,7 @@ with open(VIST_terms_path, 'r') as f:
             termset_seq = []
 
 tokenizer = Tokenizer(termset_seqs)
-with open('tokenizer.pkl', 'wb') as f:
+with open('./tokenizer.pkl', 'wb') as f:
     pickle.dump(tokenizer, f)
 ntokens = tokenizer.vocab_size
 print('vocab_size', ntokens)
