@@ -33,6 +33,29 @@ Unlike the format in VIST dataset, here we put all stories in a column. E.g.
 ```
 bash resize_all_image.sh CPU_NUM IMAGE_DIR OUTPUT_DIR
 ```
+2.in ```src/stage1/image_object_detection``` perform object detection & object feature extraction
+With Caffe environment
+```
+# Object Detection
+python3.6 ./tools/generate_tsv.py --gpu 0,1 \
+--cfg experiments/cfgs/faster_rcnn_end2end_resnet.yml\
+--def ./models/vg/ResNet-101/faster_rcnn_end2end_final/test.prototxt\
+--out vist_with_classes_attr_png.csv\
+--net data/faster_rcnn_models/resnet101_faster_rcnn_final.caffemodel\
+--split vist
+
+# Split file into npzs 
+python3.6 make_bu_data.py
+```
+3.in ```src/stage1/image2term``` generate terms from image feature 
+```
+# Build Vocabulary
+python3.6 build_term_vocab.py
+
+#Training
+# bash run.sh GPU_ID Decode_mode[transformer, rnn] Decoder_type[term, text] [-self_att] [-global_att]
+bash run_train.sh 0 term rnn -self_att
+```
 
 ## Stage 2: Word enrichment using knowledge graphs
 ### Environment
