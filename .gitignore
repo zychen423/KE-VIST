@@ -1,1 +1,9 @@
 *.pt
+./.git/objects/15/311909ccda1530d6fd1c48dc4854011c92d380
+./.git/objects/15/ddaa93869b7981b7c63cc85b73d53834349bfa
+./.git/objects/24/f09071dc12072fda6a95aedd69971eedd8771f
+./.git/objects/65/451def36be65f974d640c32de4bc495ed2cbb1
+./.git/objects/87/dd1d763293bcee233e5f3e3ebb47a0992b7fdf
+./.git/objects/c4/3cb3cca26e288dffb0a31132afeed6182d9304
+./src/stage3/term2story/save_model_finetuneLDPE_pretrain_vist/trained_accu_55.397.chkpt.zip
+./src/stage3/term2story/save_roc_modelfinetune_pretrain_vist/trained_accu_53.719.chkpt.zip
