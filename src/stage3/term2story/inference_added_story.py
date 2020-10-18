@@ -75,7 +75,7 @@ def main():
             count+=1
     print('[Info] Finished.')
     
-    filename = '../data/generated_story/VIST_test_self_output_diverse_add_highest_one_path_noun' + str(opt.insert+1) + str(opt.relation) + '_norm_penalty_coor_VISTdataset_percent_' + str(opt.positional) + '.json'
+    filename = 'VIST_test_self_output_diverse_add_highest_one_path_noun' + str(opt.insert+1) + str(opt.relation) + '_norm_penalty_coor_VISTdataset_percent_' + str(opt.positional) + '.json'
     
     json.dump(output, open(filename,'w'), indent=4)
 if __name__ == "__main__":
