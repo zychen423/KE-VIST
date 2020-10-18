@@ -95,7 +95,7 @@ For the openIE part, I mis-delete the knowledge graph result of OpenIE. I will t
 ```
 bash run.sh [GPU device number] roc [positional encoding]
 ```
-for example, running on first GPU, using LDPE positional encoding as mentioned in the paper...
+for example, running on first GPU, using LDPE positional encoding as mentioned in the paper
 ```
 bash run.sh 1 roc LDPE
 ```
@@ -115,7 +115,4 @@ python inference_added_story.py -model [trained model checkpoint filepath] -devi
 ```
 python inference_added_story.py -model save_model_finetuneLDPE_pretrain_vist/trained_accu_55.397.chkpt -device 3 -positional LDPE -term_path ../../stage2/vist_scored_terms_6_path.json
 ```
-the generate story will be saved as:
-```
-'VIST_test_self_output_diverse_add_highest_one_path_noun' + str(opt.insert+1) + str(opt.relation) + '_norm_penalty_coor_VISTdataset_percent_' + str(opt.positional) + '.json'
-```
+the generate story will be saved as```f'VIST_test_self_output_diverse_add_highest_one_path_noun' + str(opt.insert+1) + str(opt.relation) + '_norm_penalty_coor_VISTdataset_percent_' + str(opt.positional) + '.json'```
