@@ -26,6 +26,9 @@ Unlike the format in VIST dataset, here we put all stories in a column. E.g.
 ```
 
 `predicted_term_seq` is either the terms predicted from our image2term module(in this example) or . `predicted_story` is the whole story predicted by our term2story model, and `text_mapped_with_nouns_and_frame` is the result open-seasame extracted from original sentence.
+KG-Story (Visual Genome): generated_stories/1path_visualLanguageModel_VIST_LDPE.json
+KG-Story (OpenIE): generated_stories/1path_OpenieLanguageModel_VIST_LDPE.json
+KG-Story (no KG): generated_stories/0path_visual_VIST.json
 
 
 ## Stage 1: Word distillation from input prompts
@@ -86,3 +89,33 @@ result story_id-to-path file will be saved as ```./vist_scored_terms_6_path.json
 For the openIE part, I mis-delete the knowledge graph result of OpenIE. I will try to solve it in the future.
 
 ## Stage 3: Story generation
+
+### Usage
+1. train on ROC, in ```src/stage3/term2story```, run
+```
+bash run.sh [GPU device number] roc [positional encoding]
+```
+for example, running on first GPU, using LDPE positional encoding as mentioned in the paper...
+```
+bash run.sh 1 roc LDPE
+```
+trained model will be save as ```./save_model_rocLDPE/trained.chkpt``` 
+
+2. finetune on VIST, in ```src/stage3/term2story```, run
+```
+bash run_finetune.sh ./save_model_rocLDPE/trained.chkpt finetune [GPU device number] LDPE
+```
+trained model will be save in ```./save_model_finetuneLDPE_pretrain_vist/``` 
+
+3. To generate stories, in ```src/stage3/term2story```, run
+```
+python inference_added_story.py -model [trained model checkpoint filepath] -device [GPU device number] -positional LDPE -term_path [stage2 filepath]
+```
+
+```
+python inference_added_story.py -model save_model_finetuneLDPE_pretrain_vist/trained_accu_55.397.chkpt -device 3 -positional LDPE -term_path ../../stage2/vist_scored_terms_6_path.json
+```
+the generate story will be saved as:
+```
+'VIST_test_self_output_diverse_add_highest_one_path_noun' + str(opt.insert+1) + str(opt.relation) + '_norm_penalty_coor_VISTdataset_percent_' + str(opt.positional) + '.json'
+```
