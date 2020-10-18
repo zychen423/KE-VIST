@@ -80,28 +80,8 @@ class Loaders():
                                                          False, 5)
     def get_test_add_path_loaders(self, args):
         #add_termset = '../data/test_roc_add_term.json'
-        add_termset = '../data/added_path_stories/VIST_test_self_output_diverse_added_path_highest_noun' + str(args.insert+1) + str(args.relation) + '_coor.json'
+        add_termset = args.term_path
         
-        if args.insert == 1:
-            print('insert == 1')
-        elif args.insert == 2:
-            print('insert == 2')
-        else:
-            raise ValueError('args insert value invalid')
-            
-        if args.relation == 'openie':
-            print('openie')
-        elif args.relation == "language":
-            add_termset = '../data/added_path_stories/language_model_terms_add_lowest.json'
-        elif args.relation == "visual_language":
-            add_termset = '../data/added_path_stories/visual_genome_language_model_terms_add_lowest.json'
-        else:
-            print('no openie')
-        
-        if args.insert == 0:
-            add_termset = '../data/added_path_stories/VIST_test_self_output_diverse_added_path_highest_noun2_coor.json'  
-        
-            
         print(f"test data name:{add_termset}")
         Dataset = DataLoader.ROCAddTermsetDataset(self.story_vocab,
                          self.frame_vocab,
@@ -121,48 +101,4 @@ class Loaders():
                                                          self.frame_vocab,
                                                          args.batch_size,
                                                          False, 5)
-    def get_test_sixsentence_loaders(self, args):
-        #add_termset = '../data/test_roc_add_term.json'
-        add_termset = '../data/added_path_stories/VIST_test_self_output_diverse_added_path_highest_noun' + str(args.insert+1) + str(args.relation) + '_coor.json'
-        
-        if args.insert == 1:
-            print('insert == 1')
-        elif args.insert == 2:
-            print('insert == 2')
-        elif args.insert > 2:
-            raise ValueError('args insert value invalid')
-        else:
-            print('no insert')
-            
-        if args.relation == 'openie':
-            print('openie')
-        elif args.relation == "language":
-            add_termset = '../data/added_path_stories/language_model_terms_add_lowest.json'
-        elif args.relation == "visual_language":
-            add_termset = '../data/added_path_stories/visual_genome_language_model_terms_add_lowest.json'
-        else:
-            print('no relation')
-        
-        if args.insert == 0:
-            add_termset = '../data/added_path_stories/VIST_test_self_output_diverse_added_path_highest_noun2_coor.json'  
-        
-            
-        print(f"test data name:{add_termset}")
-        Dataset = DataLoader.ROCAddTermsetDataset_SixSentence(self.story_vocab,
-                         self.frame_vocab,
-                         text_path=add_termset)
-        self.loader['add_window_termset'] = DataLoader.get_window_loader(Dataset,
-                                                         self.story_vocab,
-                                                         self.frame_vocab,
-                                                         1,
-                                                         False, 1)
 
-        STORY_TERM_PATH = "../data/generated_terms/VIST_test_self_output_diverse.json"
-        Dataset = DataLoader.PredictedVISTDataset(self.story_vocab,
-                         self.frame_vocab,
-                         text_path=STORY_TERM_PATH)
-        self.loader['vist_term'] = DataLoader.get_VIST_loader(Dataset,
-                                                         self.story_vocab,
-                                                         self.frame_vocab,
-                                                         args.batch_size,
-                                                         False, 5)
