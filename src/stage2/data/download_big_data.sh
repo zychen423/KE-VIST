@@ -3,3 +3,17 @@
 wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/img_pair2path.vg.json
 wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/ROC_replace_coref_gender_mapped_frame_noun.json
 wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_coref_nos_mapped_frame_noun_train.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/concept_vocab.pkl
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/storyid2concept_tree_noun_and_frame_train.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/storyid2concept_tree_noun_and_frame_val.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/storyid2concept_tree_noun_and_frame_test.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/term_vocab.pkl
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/story_vocab.pkl
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/ROC_train.json         
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/ROC_valid.json     
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/ROC_test.json     
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_coref_nos_mapped_frame_noun_train.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_coref_nos_mapped_frame_noun_val.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_coref_nos_mapped_frame_noun_test.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_test_self_output_diverse.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/visual_genome_language_model_terms_add_lowest.json
