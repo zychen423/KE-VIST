@@ -17,3 +17,4 @@ wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_coref_nos_mapped_f
 wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_coref_nos_mapped_frame_noun_test.json
 wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/VIST_test_self_output_diverse.json
 wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/visual_genome_language_model_terms_add_lowest.json
+wget https://doraemon.iis.sinica.edu.tw/KE_VIST_AAAI2020/trained_accu_55.397.chkpt
