@@ -113,6 +113,6 @@ python inference_added_story.py -model [trained model checkpoint filepath] -devi
 ```
 
 ```
-python inference_added_story.py -model save_model_finetuneLDPE_pretrain_vist/trained_accu_55.397.chkpt -device 3 -positional LDPE -term_path ../../stage2/vist_scored_terms_6_path.json
+python inference_added_story.py -model save_model_finetuneLDPE_pretrain_vist/trained_accu_55.397.chkpt -device 3 -positional LDPE -term_path ../../stage2/visual_genome_language_model_terms_add_lowest.json
 ```
 the generate story will be saved as```f'VIST_test_self_output_diverse_add_highest_one_path_noun' + str(opt.insert+1) + str(opt.relation) + '_norm_penalty_coor_VISTdataset_percent_' + str(opt.positional) + '.json'```
