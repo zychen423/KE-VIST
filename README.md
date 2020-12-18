@@ -88,6 +88,9 @@ result story_id-to-path file will be saved as ```./vist_scored_terms_6_path.json
 
 For the openIE part, I mis-delete the knowledge graph result of OpenIE. I will try to solve it in the future.
 
+Afterwads, run convert_file_format.py to convert ```./vist_scored_terms_6_path.json``` into different data format for stage 3.
+The data is outputed as "vist_scored_terms_6_path_for_stage3.json".
+
 ## Stage 3: Story generation
 
 ### Usage
