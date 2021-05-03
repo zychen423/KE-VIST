@@ -33,6 +33,7 @@ KG-Story (no KG): generated_stories/0path_visual_VIST.json
 
 ## Stage 1: Word distillation from input prompts
 ### Environment
+See details in https://github.com/peteanderson80/bottom-up-attention.
 ```
 pytorch==1.3
 python==3.6
